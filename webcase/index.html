@@ -23,16 +23,16 @@
                         Very professional and highly customizable sketch template with lots
                         of custom pages and useful features
                     </div>
-                    <form class="ajax-contact-form" action="Contact">
+                    <form class="form__body" action="Contact">
                         <div class="section-header-wrapper__form">
                             <div class="section-header-wrapper__form-input">
-                                <input id="formName" class="form__input _req" type="text" name="name" placeholder="Your Name">
+                                <input type="text" name="name" placeholder="Your Name">
                             </div>
                             <div class="section-header-wrapper__form-input">
-                                <input type="text" class="form__input _req _email" name="email" placeholder="Your E-mail">
+                                <input type="text" name="email" placeholder="Your E-mail">
                             </div>
                             <div class="section-header-wrapper__form-button">
-                                <button class="btn-main form__button" type="submit">Get Started</button>
+                                <button class="btn-main" type="submit">Get Started</button>
                             </div>
                         </div>
                     </form>
@@ -194,9 +194,18 @@
             </div>
         </div>
     </section>
+    <div class="overlay js-overlay-thank-you">
+        <div class="popup js-thank-you">
+            <h2>Thanks for the application</h2>
+            <div class="close-popup js-close-thank-you"></div>
+        </div>
+    </div>
     <!-- / Footer-->
 
-        <script src="js/script.js"></script>
-        <script src="js/script_error.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+
 </body>
 </html>
