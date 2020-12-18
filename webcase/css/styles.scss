@@ -10,7 +10,7 @@
 @mixin start-button {
     @include fontMontserrat;
 
-    font-size: 16px;
+    font-size: calc(20px + (16 - 20) * ((100vw - 320px) / (1200 - 320)));
     margin: 0;
     padding: 16px 20px;
     border: none;
@@ -21,6 +21,7 @@
     text-decoration: none;
     display: inline-block;
 
+    
 }
 // ====== / Mixins ===== ==== ===
 
@@ -63,6 +64,7 @@ body{
         background: linear-gradient(to right, #FE985B, #FE4FA7);
         border: none;
         color: #fff;
+        
 
         &:hover{
             background: linear-gradient(to right, #FE4FA7, #FE985B);
@@ -74,6 +76,8 @@ body{
         color: white;
         background-color: black;
         transition: .2s;
+
+        
 
         &:hover{
             color: #FE985B;
@@ -98,6 +102,7 @@ body{
     background: url('../img/communicate.jpg') no-repeat 50% 50%;
     background-size: cover;
     position: relative;
+    padding: calc(20px + (50 - 20) * ((100vw - 320px) / (1200 - 320)));
 
     .section-inner{
         height: 100vh;
@@ -134,16 +139,17 @@ body{
         margin: 0 auto;
         &__title{
             font-weight: bold;
-            font-size: 56px;
-            line-height: 60px;
+            /*font-size: 56px;*/
+            font-size: calc(20px + (56 - 20) * ((100vw - 320px) / (1200 - 320)));
+            line-height: calc(20px + (60 - 20) * ((100vw - 320px) / (1200 - 320)));
             text-align: center;
-            margin-bottom: 16px;
+            margin-bottom: calc(20px + (16 - 20) * ((100vw - 320px) / (1200 - 320)));
         }
         &__subtitle{
             @include fontMontserrat;
             text-align: center;
-            font-size: 18px;
-            line-height: 32px;
+            font-size: calc(20px + (18 - 20) * ((100vw - 320px) / (1200 - 320)));
+            line-height: calc(20px + (32 - 20) * ((100vw - 320px) / (1200 - 320)));
             margin: 0px auto 44px;
             width: 50%;
         }
@@ -152,9 +158,17 @@ body{
             margin-left: 20%;
             margin-right: 20%;
 
+            @media(max-width: 950px) {
+                display: block;
+                justify-content: center;
+            }
+
             &-input{
                 flex: 1;
                 padding-right: 40px;
+                padding-right: calc(20px + (40 - 20) * ((100vw - 320px) / (1200 - 320)));
+                margin-bottom: calc(20px + (30 - 20) * ((100vw - 320px) / (1200 - 320)));
+
                 input{
                     @include fontMontserrat;
                     border:  none;
@@ -195,6 +209,14 @@ body{
 .section-promo-1{
     display: flex;
 
+    @media(max-width: 1175px) {
+        display: block;
+
+        &__content{
+            margin-bottom: 100px;
+        }
+    }
+
     &__content,
     &__video{
         flex-basis: 50%;
@@ -211,6 +233,7 @@ body{
         }
         .description-item{
             margin-top: 28px;
+
         }
     }
     &__video{
@@ -228,6 +251,19 @@ body{
     border-top: 1px solid #e2e2e2;
     text-align: center;
 
+    @media(max-width: 800px) {
+        display: block;
+
+        .description-item{
+            margin-bottom: 40px;
+        }
+
+        .description-item + .description-item{
+            
+            margin-right: 40px;
+        }
+    }
+
     .description-item + .description-item{
         margin-left: 40px;
     }
@@ -238,6 +274,10 @@ body{
 .section-founder{
     background-color: #effde4;
     padding-top: 34px;
+
+    @media(max-width: 950px) {
+        display: none;
+    }
 
     .section-inner{
         display: flex;
@@ -277,10 +317,16 @@ body{
     padding-bottom: 120px;
     text-align: center;
 
+    @media(max-width: 950px) {
+        padding: 0;
+    }
+
     &__title{
-        font-size: 36px;
-        line-height: 51px;
+        font-size: calc(20px + (36 - 20) * ((100vw - 320px) / (1200 - 320)));;
+        line-height: calc(20px + (51 - 20) * ((100vw - 320px) / (1200 - 320)));;
         font-weight: bold;
+
+        
     }
     &__subtitle{
         font-size: 16px;
@@ -292,6 +338,21 @@ body{
     &__list{
         display: flex;
         justify-content: center;
+
+        @media(max-width: 750px) {
+            display: block;
+            text-align: -webkit-center;
+
+            &-item {
+                max-width: 450px;
+                margin-bottom: 30px;
+            }
+
+            &-item + &-item{
+                margin-left: 0!important;
+            }
+
+        }
 
         &-item{
             flex-basis: 370px;
@@ -349,6 +410,13 @@ body{
     background: linear-gradient(to right, #FE985B, #FE4FA7);
     padding-top: 120px;
     padding-bottom: 120px;
+
+    @media(max-width: 600px) {
+        &__title{
+            font-weight: normal;
+            max-width: 550px;
+        }
+    }
 
     &__title{    
     font-size: 66px;

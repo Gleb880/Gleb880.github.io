@@ -369,7 +369,7 @@ body {
 
 .btn-main {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 16px;
+  font-size: calc(20px + (16 - 20) * ((100vw - 320px) / (1200 - 320)));
   margin: 0;
   padding: 16px 20px;
   border: none;
@@ -389,7 +389,7 @@ body {
 
 .btn-secondary {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 16px;
+  font-size: calc(20px + (16 - 20) * ((100vw - 320px) / (1200 - 320)));
   margin: 0;
   padding: 16px 20px;
   border: none;
@@ -409,7 +409,7 @@ body {
 
 .btn-free {
   font-family: "Montserrat Alternates", sans-serif;
-  font-size: 16px;
+  font-size: calc(20px + (16 - 20) * ((100vw - 320px) / (1200 - 320)));
   margin: 0;
   padding: 16px 20px;
   border: none;
@@ -432,6 +432,7 @@ body {
   background: url("../img/communicate.jpg") no-repeat 50% 50%;
   background-size: cover;
   position: relative;
+  padding: calc(20px + (50 - 20) * ((100vw - 320px) / (1200 - 320)));
 }
 .section-header .section-inner {
   height: 100vh;
@@ -467,16 +468,17 @@ body {
 }
 .section-header-wrapper__title {
   font-weight: bold;
-  font-size: 56px;
-  line-height: 60px;
+  /*font-size: 56px;*/
+  font-size: calc(20px + (56 - 20) * ((100vw - 320px) / (1200 - 320)));
+  line-height: calc(20px + (60 - 20) * ((100vw - 320px) / (1200 - 320)));
   text-align: center;
-  margin-bottom: 16px;
+  margin-bottom: calc(20px + (16 - 20) * ((100vw - 320px) / (1200 - 320)));
 }
 .section-header-wrapper__subtitle {
   font-family: "Montserrat Alternates", sans-serif;
   text-align: center;
-  font-size: 18px;
-  line-height: 32px;
+  font-size: calc(20px + (18 - 20) * ((100vw - 320px) / (1200 - 320)));
+  line-height: calc(20px + (32 - 20) * ((100vw - 320px) / (1200 - 320)));
   margin: 0px auto 44px;
   width: 50%;
 }
@@ -485,9 +487,17 @@ body {
   margin-left: 20%;
   margin-right: 20%;
 }
+@media (max-width: 950px) {
+  .section-header-wrapper__form {
+    display: block;
+    justify-content: center;
+  }
+}
 .section-header-wrapper__form-input {
   flex: 1;
   padding-right: 40px;
+  padding-right: calc(20px + (40 - 20) * ((100vw - 320px) / (1200 - 320)));
+  margin-bottom: calc(20px + (30 - 20) * ((100vw - 320px) / (1200 - 320)));
 }
 .section-header-wrapper__form-input input {
   font-family: "Montserrat Alternates", sans-serif;
@@ -518,6 +528,14 @@ body {
 .section-promo-1 {
   display: flex;
 }
+@media (max-width: 1175px) {
+  .section-promo-1 {
+    display: block;
+  }
+  .section-promo-1__content {
+    margin-bottom: 100px;
+  }
+}
 .section-promo-1__content, .section-promo-1__video {
   flex-basis: 50%;
 }
@@ -545,6 +563,17 @@ body {
   border-top: 1px solid #e2e2e2;
   text-align: center;
 }
+@media (max-width: 800px) {
+  .section-promo-2 {
+    display: block;
+  }
+  .section-promo-2 .description-item {
+    margin-bottom: 40px;
+  }
+  .section-promo-2 .description-item + .description-item {
+    margin-right: 40px;
+  }
+}
 .section-promo-2 .description-item + .description-item {
   margin-left: 40px;
 }
@@ -552,6 +581,11 @@ body {
 .section-founder {
   background-color: #effde4;
   padding-top: 34px;
+}
+@media (max-width: 950px) {
+  .section-founder {
+    display: none;
+  }
 }
 .section-founder .section-inner {
   display: flex;
@@ -586,9 +620,14 @@ body {
   padding-bottom: 120px;
   text-align: center;
 }
+@media (max-width: 950px) {
+  .section-plans {
+    padding: 0;
+  }
+}
 .section-plans__title {
-  font-size: 36px;
-  line-height: 51px;
+  font-size: calc(20px + (36 - 20) * ((100vw - 320px) / (1200 - 320)));
+  line-height: calc(20px + (51 - 20) * ((100vw - 320px) / (1200 - 320)));
   font-weight: bold;
 }
 .section-plans__subtitle {
@@ -601,6 +640,19 @@ body {
 .section-plans__list {
   display: flex;
   justify-content: center;
+}
+@media (max-width: 750px) {
+  .section-plans__list {
+    display: block;
+    text-align: -webkit-center;
+  }
+  .section-plans__list-item {
+    max-width: 450px;
+    margin-bottom: 30px;
+  }
+  .section-plans__list-item + .section-plans__list-item {
+    margin-left: 0 !important;
+  }
 }
 .section-plans__list-item {
   flex-basis: 370px;
@@ -650,6 +702,12 @@ body {
   background: linear-gradient(to right, #FE985B, #FE4FA7);
   padding-top: 120px;
   padding-bottom: 120px;
+}
+@media (max-width: 600px) {
+  .section-free__title {
+    font-weight: normal;
+    max-width: 550px;
+  }
 }
 .section-free__title {
   font-size: 66px;
