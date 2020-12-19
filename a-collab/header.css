@@ -1,0 +1,75 @@
+header{
+    font-family: 'Comfortaa', cursive;
+}
+
+.header__top{
+    background-color: crimson;
+}
+
+.header__btn{
+    float: right;
+    line-height: 36px;
+    color: cadetblue;
+    background-color: black;
+    padding: 5px 20px 4px 50px;
+    font-size: 15px;
+    position: relative;
+}
+
+.header__btn:before{
+    content: "\e908";
+    font-family: 'icomoon';
+    position: absolute;
+    left: 22px;
+    color: crimson;
+    font-size: 20px;
+}
+
+.header__contacts:after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.header__phone, .header__email{
+    color: aqua;
+    letter-spacing: 0.25px;
+    line-height: 45px;
+    position: relative;
+}
+
+.header__phone{
+    padding-left: 20px;
+    padding-right: 30px;
+}
+
+.header__phone:before{
+    content: "\e906";
+    font-family: 'icomoon';
+    position: absolute;
+    left: 0;
+    color: black;
+    font-size: 20px;
+}
+
+.header__email{
+    padding-left: 24px;
+}
+
+.header__email:before{
+    content: "\e904";
+    font-family: 'icomoon';
+    position: absolute;
+    left: 0;
+    color: black;
+    font-size: 20px;
+}
+
+.header__content{
+    padding: 20px;
+}
+
+.header__content-inner{
+    display: flex;
+    justify-content: space-between;
+}
