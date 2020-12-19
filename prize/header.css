@@ -1,0 +1,21 @@
+.header-1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99999;
+    background: transparent;
+    padding: 21px 40px 0 24px;
+    border-bottom: 1px solid #fff;
+    transition: all ease 1s;
+  }
+  .header-1.fixedbar {
+    position: fixed !important;
+    background: #ccc674;
+    padding: 10px 40px 0 24px;
+  }
+  
+  #header {
+    position: absolute;
+    width: 100%;
+  }
