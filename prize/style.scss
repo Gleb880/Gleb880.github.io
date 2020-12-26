@@ -750,3 +750,201 @@ a.box.text-center{
 }
 
 // / Zoom
+
+// Media requests
+@media(max-width: 1300px) {
+    .myslides{
+        h2{
+            font-size: calc(20px + (40 - 30) * ((100vw - 320px) / (1300 - 320)));
+
+            span{
+                font-size: calc(20px + (22 - 20) * ((100vw - 320px) / (1300 - 320)));
+                padding-right: calc(20px + (20 - 20) * ((100vw - 320px) / (1300 - 320)));
+            }
+        }
+
+        .p_detail{
+            h3{
+                font-size: calc(20px + (50 - 20) * ((100vw - 320px) / (1300 - 320)));
+            }
+
+            h4{
+                font-size: calc(20px + (20 - 20) * ((100vw - 320px) / (1300 - 320)));
+                margin-bottom: calc(20px + (15 - 20) * ((100vw - 320px) / (1300 - 320)));
+            }
+        }
+    }
+
+    .service_section{
+        padding: calc(20px + (150 - 20) * ((100vw - 320px) / (1300 - 320)));
+    }
+
+    .sec_title{
+    font-size: calc(20px + (50 - 20) * ((100vw - 320px) / (1300 - 320)));
+    line-height: calc(20px + (60 - 20) * ((100vw - 320px) / (1300 - 320)));
+    padding: calc(20px + (14 - 20) * ((100vw - 320px) / (1300 - 320)));
+    }
+
+    .flipper{
+        margin-top: calc(20px + (60 - 20) * ((100vw - 320px) / (1300 - 320)));
+    }
+
+    .front, .back{
+        min-width: calc(20px + (200 - 30) * ((100vw - 320px) / (1300 - 320)));
+    }
+}
+
+@media(max-width: 1200px) {
+    .tabs{
+        height: 190vh;
+
+        img{
+            display: none;
+        }
+        .card{
+            &.left-pane,
+            &.right-pane{
+                .text-wrapper{
+                    display: list-item;
+                    text-align: left;
+
+                    p{
+                        min-width: 150%;
+                    }
+                }
+                
+            }
+            .card-title{
+                text-align: center;
+            }
+            .card-icon{
+                display: none;
+            }
+        }
+
+        .x{
+            display: none;
+        }
+        
+        .col-lg-4,
+        .col-md-4{
+            margin: 0 80px;
+        }
+        .col-md-8{
+            justify-content: center;
+            display: block;
+            min-width: 100%;
+            
+        }
+
+        h3{
+            text-align: left;
+        }
+        p{
+            text-align :center;
+            color: #fff;
+        }
+        .icon-cards-area, 
+        .col-md-8{
+            .card-body{
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+    .front, .back{
+        color: rgb(182, 0, 0);
+        max-width: calc(20px + (200 - 30) * ((100vw - 320px) / (1200 - 320)));
+        max-height: calc(20px + (200 - 30) * ((100vw - 320px) / (1200 - 320)));
+
+        h3{
+            font-size: calc(20px + (50 - 60) * ((100vw - 320px) / (1200 - 320)));
+        }
+
+        i{
+            font-size: 40px;
+        }
+    }
+
+    .custom_column{
+        .col-lg-3{
+            display: block;
+        }
+    }
+
+    .p_detail{
+        position: relative;
+    }
+    .p_img:hover{
+        position: center;
+    }
+    
+}
+
+@media(max-width: 991px) {
+    .slideshow-container{
+        height: 110vh;
+
+        .myslides{
+
+            h2{
+                font-weight: normal;
+                top: 465px;
+                left: 35%;
+                font-size: 20px;
+                max-width: 300px;
+                text-align: center;
+
+                span{
+                    font-size: 19px;
+                }
+
+            }
+
+            .p_detail{
+                display: none;
+            }
+
+            .p_img{
+                left: 32%;
+            }
+        }
+
+        .prev,
+        .next{
+            top: 90%;
+            border-radius: 20px;
+            padding: 10px;
+        }
+        .prev{
+            left: 45%;
+        }
+        .next{
+            right: 45%;
+        }
+
+    }
+
+        
+        .row.custom_column{
+            display: flex;
+
+            a{
+                flex: 50%;
+            }
+        }
+}
+
+@media(max-width: 770px) {
+    .tabs{
+        height: 230vh;
+
+        .card{
+            left: 10%;
+            background: rgba(139, 139, 139, 0.6);
+        }
+        
+    }
+}
+
+// / Media requests
