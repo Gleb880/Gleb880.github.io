@@ -157,7 +157,7 @@ a {
   max-width: 100%;
   position: relative;
   margin: auto;
-  background: url(../img/bg-image.jpeg) 0 0 no-repeat;
+  background: url(./img/bg-image.jpeg) 0 0 no-repeat;
   background-size: cover;
   height: 100vh;
   overflow: hidden;
@@ -435,7 +435,7 @@ a.box.text-center {
 
 .tabs {
   color: #ebb748;
-  background: url(../img/bi-tabs.jpg) fixed;
+  background: url(./img/bi-tabs.jpg) fixed;
   max-width: 100%;
   height: 170vh;
   background-size: cover;
